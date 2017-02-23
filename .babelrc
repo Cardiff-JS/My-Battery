@@ -1,0 +1,14 @@
+{
+  "presets": ["react", "es2015", "stage-0", "es2017"],
+  "plugins": [
+    "transform-object-rest-spread",
+    "transform-react-display-name",
+    "transform-runtime",
+    ["module-resolver", {
+      "alias": {
+        "react": "preact-compat",
+        "react-dom": "preact-compat"
+      }
+    }]
+  ]
+}
