@@ -15,6 +15,7 @@ const renderApp = () => {
 
 // Hot Module Replacement API
 if(module.hot) {
+  require('preact/devtools');
   module.hot.accept('./components/App', renderApp);
 }
 
