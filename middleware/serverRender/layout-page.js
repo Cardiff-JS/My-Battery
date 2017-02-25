@@ -5,6 +5,7 @@ const layoutPage = data => {
 <html>
 <head>
   <title>What is my battery</title>
+  <link rel="manifest" href="/manifest.json">
 </head>
 <body>
   ${data.markup}

@@ -9,7 +9,9 @@ const express = require('express');
 const webpack = require('webpack');
 const compression = require('compression');
 const bodyParser = require('body-parser');
+
 const serverRender = require('./middleware/serverRender').default;
+const serveManifest = require('./middleware/serveManifest').default;
 
 // Create the app
 const app = express();
@@ -45,9 +47,14 @@ app.use(require('webpack-hot-middleware')(compiler));
 
 
 
-// Serve the preact app
+// Create the FE routes
 // ----------------------------------------
-app.get('*', serverRender);
+const router = express.Router();
+
+router.get('/manifest.json', serveManifest);
+router.get('*', serverRender);
+
+app.use('/', router);
 
 
 

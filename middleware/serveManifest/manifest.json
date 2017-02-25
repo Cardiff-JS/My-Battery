@@ -1,0 +1,14 @@
+{
+  "name": "My Battery",
+  "short_name": "My Battery",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F9EED7",
+  "theme_color": "#61D095",
+  "icons": [{
+    "src": "http://www.freeiconspng.com/uploads/battery-icon-4.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }]
+}
