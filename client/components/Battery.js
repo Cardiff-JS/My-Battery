@@ -7,10 +7,12 @@ class Battery extends Component {
   }
 
   render() {
-    <div>
-      {this.props.battery}
-      {this.props.charging}
-    </div>
+    return (
+      <div className="Battery">
+        {this.props.battery}
+        {this.props.charging}
+      </div>
+    );
   }
 };
 

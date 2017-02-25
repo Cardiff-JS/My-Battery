@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 
 module.exports = {
   devtool: 'source-map',
@@ -13,20 +12,16 @@ module.exports = {
     publicPath: '/static/'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loaders: ['babel-loader'],
+        use: ['babel-loader', 'eslint-loader'],
         include: __dirname,
-        exclude: /node_modules/
+        exclude: path.join(__dirname, 'node_modules')
       }, {
         test: /\.scss$/,
-        include: path.join(__dirname, 'client'),
-        loader: 'ignore-loader'
-      }, {
-        test: /\.json$/,
-        include: __dirname,
-        loader: 'json-loader'
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        include: path.join(__dirname, 'client')
       }
     ]
   }

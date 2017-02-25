@@ -22,16 +22,20 @@
     "body-parser": "^1.11.1",
     "compression": "^1.6.2",
     "cookie-parser": "^1.4.3",
+    "css-loader": "^0.26.2",
+    "eslint": "^3.16.0",
+    "eslint-loader": "^1.6.3",
+    "eslint-plugin-babel": "^4.0.1",
+    "eslint-plugin-react": "^6.10.0",
     "express": "^4.14.1",
+    "node-sass": "^4.5.0",
+    "normalize-scss": "^6.0.0",
     "preact": "^7.2.0",
     "preact-compat": "^3.13.1",
+    "sass-loader": "^6.0.2",
+    "style-loader": "^0.13.2",
     "webpack": "^2.2.1",
     "webpack-dev-middleware": "^1.10.1",
     "webpack-hot-middleware": "^2.17.0"
-  },
-  "devDependencies": {
-    "babel-eslint": "^7.1.1",
-    "eslint": "^3.16.0",
-    "eslint-plugin-babel": "^4.0.1"
   }
 }
