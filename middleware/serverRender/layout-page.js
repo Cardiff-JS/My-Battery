@@ -7,9 +7,7 @@ const layoutPage = data => {
   <title>What is my battery</title>
 </head>
 <body>
-  <div class="application">
-    ${data.markup}
-  </div>
+  ${data.markup}
 
   <script>
     window.data = ${JSON.stringify(data.defaultData)}

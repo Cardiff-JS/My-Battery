@@ -2869,6 +2869,10 @@ mixin-object@^2.0.1:
   dependencies:
     minimist "0.0.8"
 
+module-alias@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/module-alias/-/module-alias-2.0.0.tgz#9bff2cba6eb181dac8e379d69fe34b066a970988"
+
 ms@0.7.1:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.1.tgz#9cd13c03adbff25b65effde7ce864ee952017098"
@@ -3460,7 +3464,7 @@ preact-compat@^3.13.1:
     proptypes "^0.14.3"
     standalone-react-addons-pure-render-mixin "^0.1.1"
 
-preact-render-to-string@^3.2.1, preact-render-to-string@^3.6.0:
+preact-render-to-string@^3.2.1:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-3.6.0.tgz#03a49d2d755a766c3d421e8b06d6edbb33ed6bde"
   dependencies:
