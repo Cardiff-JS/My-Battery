@@ -6,7 +6,6 @@ require('babel-register');
 
 // Import dependancies and create app
 const express = require('express');
-const path = require('path');
 const webpack = require('webpack');
 const compression = require('compression');
 const bodyParser = require('body-parser');
@@ -25,7 +24,7 @@ app.use(compression());
 // Change the powered by header
 // ----------------------------------------
 app.use((req, res, next) => {
-  res.header("X-powered-by", "Your friendly neighbourhood spiderman");
+  res.header('X-powered-by', 'Your friendly neighbourhood spiderman');
   next();
 });
 
@@ -60,5 +59,5 @@ app.listen('3000', '0.0.0.0', err => {
     process.exit(0);
   }
 
-  console.info(`Running server at http://localhost:3000`);
+  console.info('Running server at http://localhost:3000');
 });

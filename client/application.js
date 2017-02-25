@@ -1,11 +1,18 @@
 import React, { render } from 'react';
 import App from './components/App';
 
+// Import styles for the application
 import 'client/styles/app.scss';
 
-// Get the battery data and render the app
-navigator.getBattery().then(data => {
-  window.data = data;
-});
+// Function to render the app
+const renderApp = () => {
+  render(<App />, document.getElementById('application'));
+};
 
-render(<App />, document.body);
+// Hot Module Replacement API
+if(module.hot) {
+  module.hot.accept('./components/App', renderApp);
+}
+
+// Render the app
+renderApp();

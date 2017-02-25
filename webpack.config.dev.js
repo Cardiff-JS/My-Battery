@@ -1,9 +1,11 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   devtool: 'source-map',
   entry: [
     'babel-polyfill',
+    'webpack-hot-middleware/client',
     './client/application'
   ],
   output: {
@@ -11,6 +13,10 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/static/'
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin()
+  ],
   module: {
     rules: [
       {
