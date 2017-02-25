@@ -5,33 +5,21 @@ class Battery extends Component {
   constructor(props) {
     super(props);
 
-    // this.createBatteryState = this.createBatteryState.bind(this);
+    this.state = {
+      level: 0.0
+    };
   }
 
-  // createBatteryState() {
-  //   if(this.props.level > 0.66) {
-  //     return (
-  //       <p>Going strong!</p>
-  //     );
-  //   }
-
-  //   if(this.props.level <= 0.66 && this.props.level > 0.33) {
-  //     return (
-  //       <p>Keep an eye out</p>
-  //     );
-  //   }
-
-  //   if(this.props.level <= 0.33) {
-  //     return (
-  //       <p>Get me on charge!</p>
-  //     );
-  //   }
-  // }
+  componentDidMount() {
+    navigator.getBattery().then(data => {
+      this.setState(data);
+    });
+  }
 
   render() {
     return (
       <div className="Battery">
-        <p>Hello World</p>
+        <p>{this.state.level * 100}%</p>
       </div>
     );
   }

@@ -2,14 +2,12 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import App from 'client/components/App';
 import layoutPage from './layout-page';
-import defaultData from './default-data';
 
 const serverRender = (req, res) => {
 
-  const markup = renderToString(<App {...defaultData} />);
+  const markup = renderToString(<App />);
   const page = layoutPage({
-    markup,
-    defaultData
+    markup
   });
 
   res.send(page);

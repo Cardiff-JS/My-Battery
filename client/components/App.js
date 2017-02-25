@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Battery {...this.props} />
+        <Battery />
       </div>
     );
   }
