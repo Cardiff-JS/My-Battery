@@ -5,6 +5,7 @@ import layoutPage from './layout-page';
 import defaultData from './default-data';
 
 const serverRender = (req, res) => {
+
   const markup = renderToString(<App {...defaultData} />);
   const page = layoutPage({
     markup,

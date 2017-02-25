@@ -1,4 +1,5 @@
-import React, { render } from 'react';
+import React from 'react';
+import { render } from 'preact';
 import App from './components/App';
 
 // Import styles for the application
