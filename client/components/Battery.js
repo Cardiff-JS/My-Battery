@@ -11,8 +11,20 @@ class Battery extends Component {
   }
 
   componentDidMount() {
-    navigator.getBattery().then(data => {
-      this.setState(data);
+    navigator.getBattery().then(battery => {
+      // Add the battery data to the state
+      this.setState(battery);
+
+      // Listen to when the level of the battery changes
+      battery.addEventListener('levelchange', () => {
+        this.setState(battery);
+      });
+
+      // Listen to when the status of charging changes
+      battery.addEventListener('chargingchange', () => {
+        this.setState(battery);
+      });
+
     });
   }
 
