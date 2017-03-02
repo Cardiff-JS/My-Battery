@@ -17,3 +17,11 @@ body, html, .App {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.Battery_level {
+  text-align: center;
+  font-size: 5rem;
+  color: $dark-pale-yellow;
+  margin-top: 4.5rem;
+  margin-bottom: 4.5rem;
+}

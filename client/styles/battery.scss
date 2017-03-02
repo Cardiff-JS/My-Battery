@@ -4,10 +4,50 @@
   border-radius: 0.625rem;
   text-align: center;
   width: 12.5rem;
-  height: 1.625rem;
+  height: 2.625rem;
 }
 
 .Battery_contents {
   background-color: $green;
   height: 100%;
+}
+
+.Battery_face {
+  height: 100%;
+  margin-left: 42.5%;
+  margin-right: 42.5%;
+  position: relative;
+  box-sizing: border-box;
+  width: calc(12.5rem - 85%);
+
+  &-left-eye {
+    left: 0;
+  }
+
+  &-right-eye {
+    right: 0;
+  }
+
+  &-mouth {
+    width: 13px;
+    height: 11px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom: 3.5px solid $black;
+    border-left: 3.5px solid $black;
+    border-right: 3.5px solid $black;
+    position: absolute;
+    top: 1.3rem;
+    left: 50%;
+    margin-left: -0.59rem;
+  }
+
+  &-left-eye, &-right-eye {
+    top: 0.7rem;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: $black;
+  }
 }
