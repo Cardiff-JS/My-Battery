@@ -1,4 +1,15 @@
 @import "../../node_modules/node-normalize-scss/normalize";
+@import url('https://fonts.googleapis.com/css?family=News+Cycle');
+
+@import "variables";
 
 @import "page";
 @import "battery";
+
+.Battery_level {
+  text-align: center;
+  font-size: 5rem;
+  color: $dark-pale-yellow;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}

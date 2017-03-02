@@ -1,7 +1,13 @@
 .Battery {
   margin: 0 auto;
-  border: 10px solid #61D095;
-  border-radius: 10px;
+  border: 10px solid $green;
+  border-radius: 0.625rem;
   text-align: center;
-  width: 200px;
+  width: 12.5rem;
+  height: 1.625rem;
+}
+
+.Battery_contents {
+  background-color: $green;
+  height: 100%;
 }
