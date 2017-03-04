@@ -12,6 +12,11 @@ const layoutPage = data => {
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+${process.env.NODE_ENV === 'production' ? `
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/static/style.css">
+` : ''}
+
   <!-- Application Manifest -->
   <link rel="manifest" href="/manifest.json">
 </head>

@@ -34,16 +34,20 @@ app.use((req, res, next) => {
 
 // Set up the webpack env
 // ----------------------------------------
-const config = require('./webpack.config.dev');
-const compiler = webpack(config);
+if(process.env.NODE_ENV !== 'production') {
+  const config = require('./webpack.config.dev');
+  const compiler = webpack(config);
 
-app.use(require('webpack-dev-middleware')(compiler, {
-  noInfo: true,
-  serverSideRender: true,
-  publicPath: config.output.publicPath
-}));
+  app.use(require('webpack-dev-middleware')(compiler, {
+    noInfo: true,
+    serverSideRender: true,
+    publicPath: config.output.publicPath
+  }));
 
-app.use(require('webpack-hot-middleware')(compiler));
+  app.use(require('webpack-hot-middleware')(compiler));
+} else {
+  app.use('/static', express.static(`${__dirname}/dist`, {maxAge:'365d'}));
+}
 
 
 
