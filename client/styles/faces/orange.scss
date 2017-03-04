@@ -1,0 +1,31 @@
+.Battery--orange .Battery_face {
+
+  &-left-eye {
+    left: 0;
+  }
+
+  &-right-eye {
+    right: 0;
+  }
+
+  &-mouth {
+    width: 0.9375rem;
+    height: 0.4375rem;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-top: 3.5px solid $black;
+    position: absolute;
+    top: 1.3rem;
+    left: 50%;
+    margin-left: -0.45rem;
+  }
+
+  &-left-eye, &-right-eye {
+    top: 0.7rem;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: $black;
+  }
+}

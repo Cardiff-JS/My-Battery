@@ -1,53 +1,63 @@
 .Battery {
   margin: 0 auto;
   border: 10px solid $green;
+  background-color: transparentize($green, 0.7);
   border-radius: 0.625rem;
   text-align: center;
   width: 12.5rem;
   height: 2.625rem;
+
+  &--turquoise {
+    background-color: transparentize($turquoise, 0.7);
+  }
+
+  &--yellow {
+    background-color: transparentize($yellow, 0.7);
+  }
+
+  &--orange {
+    background-color: transparentize($orange, 0.7);
+  }
+
+  &--red {
+    background-color: transparentize($red, 0.7);
+  }
+
+  &--turquoise .Battery_contents {
+    background-color: $turquoise;
+  }
+
+  &--yellow .Battery_contents {
+    background-color: $yellow;
+  }
+
+  &--orange .Battery_contents {
+    background-color: $orange;
+  }
+
+  &--red .Battery_contents {
+    background-color: $red;
+  }
 }
 
 .Battery_contents {
   background-color: $green;
   height: 100%;
+  float: left;
 }
 
 .Battery_face {
   height: 100%;
-  margin-left: 42.5%;
-  margin-right: 42.5%;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   box-sizing: border-box;
-  width: calc(12.5rem - 85%);
-
-  &-left-eye {
-    left: 0;
-  }
-
-  &-right-eye {
-    right: 0;
-  }
-
-  &-mouth {
-    width: 13px;
-    height: 11px;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-bottom: 3.5px solid $black;
-    border-left: 3.5px solid $black;
-    border-right: 3.5px solid $black;
-    position: absolute;
-    top: 1.3rem;
-    left: 50%;
-    margin-left: -0.59rem;
-  }
-
-  &-left-eye, &-right-eye {
-    top: 0.7rem;
-    width: 8px;
-    height: 8px;
-    position: absolute;
-    border-radius: 50%;
-    background-color: $black;
-  }
+  width: 2.5625rem;
 }
+
+// Import the faces
+@import 'faces/green';
+@import 'faces/turquoise';
+@import 'faces/yellow';
+@import 'faces/orange';
+@import 'faces/red';

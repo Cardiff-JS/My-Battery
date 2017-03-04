@@ -12,19 +12,21 @@ class Battery extends Component {
     const level = parseInt(this.props.level * 100);
 
     const classes = cx({
-      'Battery_contents': true,
-      'Battery_contents--full': level > 70,
-      'Battery_contents--empty': level < 20
+      'Battery': true,
+      'Battery--green': level >= 70,
+      'Battery--turquoise': level < 70 && level >= 50,
+      'Battery--yellow': level < 50 && level >=30,
+      'Battery--orange': level < 30 && level >= 20,
+      'Battery--red': level < 20
     });
 
     return (
-      <div className="Battery">
-        <div className={classes} style={{width: `${level}%`}}>
-          <div className="Battery_face">
-            <div className="Battery_face-left-eye"></div>
-            <div className="Battery_face-right-eye"></div>
-            <div className="Battery_face-mouth"></div>
-          </div>
+      <div className={classes}>
+        <div className="Battery_contents" style={{width: `${level}%`}}></div>
+        <div className="Battery_face">
+          <div className="Battery_face-left-eye"></div>
+          <div className="Battery_face-right-eye"></div>
+          <div className="Battery_face-mouth"></div>
         </div>
       </div>
     );
