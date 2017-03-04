@@ -36,6 +36,9 @@ class App extends Component {
           <Battery {...this.state} />
           <p className="Battery_level">{parseInt(this.state.level * 100)}%</p>
         </div>
+        <p className="Copy-link">
+          <a href="http://jackrimell.co.uk" target="_blank">JackRimell.co.uk</a>
+        </p>
       </div>
     );
   }
