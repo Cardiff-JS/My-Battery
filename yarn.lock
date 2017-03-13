@@ -3464,16 +3464,16 @@ postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-preact-compat@^3.13.1:
-  version "3.13.1"
-  resolved "https://registry.yarnpkg.com/preact-compat/-/preact-compat-3.13.1.tgz#efe46e072a8eee0774a41e362b4b253c1d66726a"
+preact-compat@^3.14.1:
+  version "3.14.1"
+  resolved "https://registry.yarnpkg.com/preact-compat/-/preact-compat-3.14.1.tgz#20d2b448cd596a8b18ba61d0a3db9ac2b485adb1"
   dependencies:
-    preact-render-to-string "^3.2.1"
+    preact-render-to-string "^3.6.0"
     preact-transition-group "^1.1.0"
     proptypes "^0.14.3"
     standalone-react-addons-pure-render-mixin "^0.1.1"
 
-preact-render-to-string@^3.2.1:
+preact-render-to-string@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-3.6.0.tgz#03a49d2d755a766c3d421e8b06d6edbb33ed6bde"
   dependencies:

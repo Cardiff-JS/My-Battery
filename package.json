@@ -40,7 +40,7 @@
     "node-normalize-scss": "^1.4.0",
     "node-sass": "^4.5.0",
     "preact": "^7.2.0",
-    "preact-compat": "^3.13.1",
+    "preact-compat": "^3.14.1",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.2",
     "style-loader": "^0.13.2",
