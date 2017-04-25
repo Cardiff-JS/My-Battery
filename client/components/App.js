@@ -33,6 +33,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App_wrapper">
+          <h1 className="Battery_title">What is my battery?</h1>
           <Battery {...this.state} />
           <p className="Battery_level">{parseInt(this.state.level * 100)}%</p>
         </div>

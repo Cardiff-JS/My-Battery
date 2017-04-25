@@ -18,6 +18,17 @@ body, html, .App {
   transform: translate(-50%, -50%);
 }
 
+.Battery_title {
+  text-align: center;
+  font-size: 3.1rem;
+  color: $dark-pale-blue;
+  margin-bottom: 4.5rem;
+
+  @media(min-width: 580px) {
+    font-size: 4.1rem;
+  }
+}
+
 .Battery_level {
   text-align: center;
   font-size: 5rem;
